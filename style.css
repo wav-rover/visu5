@@ -1,0 +1,315 @@
+:root {
+    /* Default theme (Blue) */
+    --primary: #2596be;
+    --secondary: #09090b;
+    --accent: #fafafa;
+    --border: #252525;
+    --blur-bg: rgba(0, 0, 0, 0.3);
+    --text-gray: #636363;
+}
+
+/* Theme variations */
+.theme-orange {
+    --primary: #ff8c00;
+    --secondary: #09090b;
+    --accent: #fff3e6;
+    --border: #252525;
+    --blur-bg: rgba(0, 0, 0, 0.3);
+    --text-gray: #805c33;
+}
+
+.theme-green {
+    --primary: #2e7d32;
+    --secondary: #09090b;
+    --accent: #e8f5e9;
+    --border: #252525;
+    --blur-bg: rgba(0, 0, 0, 0.3);
+    --text-gray: #4d7a50;
+}
+
+.theme-red {
+    --primary: #c62828;
+    --secondary: #09090b;
+    --accent: #ffebee;
+    --border: #252525;
+    --blur-bg: rgba(0, 0, 0, 0.3);
+    --text-gray: #994d4d;
+}
+
+.theme-brown {
+    --primary: #6d4c41;
+    --secondary: #fafafa;
+    --accent: #09090b;
+    --border: #252525;
+    --blur-bg: rgba(0, 0, 0, 0.3);
+    --text-gray: #7a5e54;
+}
+
+.bg {
+    background-color: var(--secondary);
+}
+
+.text {
+    color: var(--accent);
+}
+
+.text-nb {
+    font-weight: 700;
+}
+
+.logo {
+    width: 30px;
+    height: 20px;
+    background-color: var(--accent);
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.bg-blur {
+    background-color: var(--blur-bg);
+    backdrop-filter: blur(5px);
+}
+
+.tooltip {
+    position: absolute;
+    background-color: var(--secondary);
+    border: 1px dashed var(--border);
+    padding: 10px;
+    border-radius: 5px;
+    pointer-events: none;
+}
+
+.axis-label {
+    fill: var(--accent);
+}
+
+.x-axis text, .y-axis text {
+    color: var(--accent);
+    font-size: 10px;
+}
+
+.point {
+    fill: var(--primary);
+}.graph-line {
+    stroke: var(--primary);
+    stroke-width: 2;
+    fill: none;
+}
+.radar-path {
+    fill: var(--primary);
+    fill-opacity: 0.3;
+    stroke: var(--primary);
+    stroke-width: 2;
+}
+
+.radar-dot {
+    fill: var(--primary);
+}
+
+.navbar-text-border {
+    color: var(--accent);
+}
+
+.text-small {
+    font-size: 12px;
+}
+
+.card {
+    background-color: #15151500;
+    border-radius: 0.5rem;
+    width: 60%;
+    border-color: var(--border);
+}
+
+.card-2 {
+    background-color: #15151500;
+    border-radius: 0.5rem;
+    width: 40%;
+    border-color: var(--border);
+}
+
+.card-header {
+    background-color: transparent;
+}
+
+.month rect {
+    fill: var(--primary);
+}
+
+.month rect.previous-year {
+    fill: var(--accent);
+}
+
+.tooltip {
+    position: absolute;
+    padding: 10px;
+    font: 12px sans-serif;
+    background: var(--secondary);
+    border: 1px solid var(--border);
+    border-radius: 7px;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.text-gray {
+    color: var(--text-gray);
+    font-size: 11px;
+}
+
+@keyframes rotateSequence {
+    0% {
+        transform: rotate(0deg);
+    }
+    20% {
+        transform: rotate(90deg);
+    }
+    40% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+#blue {
+    position: relative;
+    background-color: #2596be;
+    width: 1.9rem;
+    height: 1.9rem;
+    border-radius: 0.5rem;
+    animation: rotateSequence 2s infinite;
+    animation-delay: 0s;
+}
+
+#orange {
+    background-color: #ff8c00;
+    width: 1.9rem;
+    height: 1.9rem;
+    border-radius: 0.5rem;
+    animation: rotateSequence 2s infinite;
+    animation-delay: 0.4s;
+}
+
+#green {
+    background-color: #2e7d32;
+    width: 1.9rem;
+    height: 1.9rem;
+    border-radius: 0.5rem;
+    animation: rotateSequence 2s infinite;
+    animation-delay: 0.8s;
+}
+
+#red {
+    background-color: #c62828;
+    width: 1.9rem;
+    height: 1.9rem;
+    border-radius: 0.5rem;
+    animation: rotateSequence 2s infinite;
+    animation-delay: 1.2s;
+}
+
+#brown {
+    background-color: #6d4c41;
+    width: 1.9rem;
+    height: 1.9rem;
+    border-radius: 0.5rem;
+    animation: rotateSequence 2s infinite;
+    animation-delay: 1.6s;
+}
+
+.btn-custom.stop-animation {
+    animation: none !important;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    20% {
+        transform: rotate(90deg);
+    }
+    40% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.position-indicator {
+    --indicator-position: 0px;
+}
+
+#blue::before {
+    content: "";
+    position: absolute;
+    width: 1.9rem;
+    height: 1.9rem;
+    opacity: 0;
+    border-radius: 0.5rem;
+    border: 3px solid var(--secondary);
+    box-shadow: 0 0 0 1.5px var(--accent);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    animation: fadeIn 1s linear forwards;
+    animation-delay: 2s;
+    transition: margin-left 0.3s ease;
+    margin-left: var(--indicator-position);
+    pointer-events: none;
+}
+
+/* Positions for each button */
+.pos-blue #blue::before {
+    margin-left: 0px;
+}
+
+.pos-orange #blue::before {
+    margin-left: 40px;
+}
+
+.pos-green #blue::before {
+    margin-left: 80px;
+}
+
+.pos-red #blue::before {
+    margin-left: 115px;
+}
+
+.pos-brown #blue::before {
+    margin-left: 155px;
+}
+
+.theme-transition-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--secondary);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 9999;
+}
+
+.theme-transition-overlay.active {
+    opacity: 1;
+}
+
+.datePicker {
+    background-color: var(--accent);
+    color: var(--secondary);
+    border: 1px solid rgb(49, 49, 49);
+    border-radius: 5px;
+    padding-left: 5px;
+}
