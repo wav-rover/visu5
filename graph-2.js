@@ -151,7 +151,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 const total = groupedData.reduce((acc, curr) => acc + curr.windspeed, 0)
                 const average = total / groupedData.length
                 document.getElementById("moyVitesse").textContent = average.toFixed(1) + " km/h";
-                document.getElementById("vitesseDate").textContent = formattedDate
+
                 dataLoaded = true;
                 stopAnimation();
             })
